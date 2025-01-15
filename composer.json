@@ -1,0 +1,62 @@
+{
+    "name": "mad-web/laravel-social-auth",
+    "type": "library",
+    "description": "Easy social auth integration with a lot of available providers",
+    "keywords": [
+        "mad-web",
+        "social",
+        "auth",
+        "laravel",
+        "socialite",
+        "login",
+        "signin"
+    ],
+    "homepage": "https://github.com/mad-web/laravel-social-auth",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mad Web",
+            "email": "madweb.dev@gmail.com",
+            "homepage": "https://github.com/mad-web",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/broadcasting": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/database": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/events": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/routing": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+        "laravel/ui": "^1.0 || ^2.0 || ^3.0",
+        "socialiteproviders/manager": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3",
+        "phpunit/phpunit": "^8.0 || ^9.3",
+        "orchestra/testbench": "^4.0 || ^5.0 || ^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MadWeb\\SocialAuth\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MadWeb\\SocialAuth\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MadWeb\\SocialAuth\\SocialAuthServiceProvider"
+            ]
+        }
+    }
+}
